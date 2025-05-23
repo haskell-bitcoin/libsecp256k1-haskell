@@ -1,5 +1,5 @@
 name: libsecp256k1
-version: 0.2.1
+version: 0.3.1
 synopsis: Bindings for secp256k1
 description: Sign and verify signatures using the secp256k1 library.
 category: Crypto
@@ -29,6 +29,10 @@ library:
   source-dirs: src
   pkg-config-dependencies:
     - libsecp256k1
+  hs-source-dirs:
+    src
+  c-sources:
+    cbits/hs_secp256k1_shim.c
 tests:
   spec:
     main: Main.hs
